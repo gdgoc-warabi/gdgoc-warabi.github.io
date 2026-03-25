@@ -10,7 +10,7 @@ GitHub Pages で公開するドキュメント一式です。
 
 公開 URL（プロジェクトページ）:
 
-- <https://gdgoc-warabi.github.io/docs/>
+- <https://gdgoc-warabi.github.io/>
 
 ## GitHub Pages 設定
 
