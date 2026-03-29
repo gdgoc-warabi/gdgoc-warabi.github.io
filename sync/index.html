@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sync - 感性で繋がる提案アプリ</title>
+    <style>
+      :root {
+        --primary-color: #0a7a55;
+        --bg-color: #fbfbf9;
+        --text-color: #1f1f1f;
+        --card-bg: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Yu Gothic UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+        line-height: 1.8;
+        color: var(--text-color);
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* ヘッダー・ナビゲーション */
+      header {
+        background: var(--card-bg);
+        padding: 16px 5vw;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .header-logo img {
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+      }
+
+      .header-logo h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: var(--text-color);
+      }
+
+      /* メインコンテンツ */
+      main {
+        flex: 1;
+        width: min(1000px, 90%);
+        margin: 40px auto;
+      }
+
+      /* ヒーローセクション（トップの目立つ部分） */
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        background: var(--card-bg);
+        padding: clamp(24px, 5vw, 48px);
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        margin-bottom: 40px;
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hero-text h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+
+      .hero-text h2 span {
+        color: var(--primary-color);
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+      }
+
+      .app-name-highlight {
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: inline-block;
+        background: #e6f2ee;
+        color: var(--primary-color);
+        padding: 4px 12px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        max-height: 450px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* アプリ紹介セクション */
+      .app-series {
+        text-align: center;
+      }
+
+      .app-series h3 {
+        font-size: 1.8rem;
+        margin-bottom: 32px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        padding: 32px 24px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+      }
+
+      .card h4 {
+        margin: 0 0 12px 0;
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* フッター */
+      footer {
+        background: var(--card-bg);
+        text-align: center;
+        padding: 32px 20px;
+        border-top: 1px solid #e9e7e2;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 16px;
+      }
+
+      .footer-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .copyright {
+        color: #888;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="./img/syncSeries_icon.png" alt="Sync Series Logo" />
+        <h1>Sync</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <div class="app-name-highlight">アプリシリーズ名：Sync</div>
+          <h2><span>感性</span>で繋がる、<br />最適な作品提案アプリ</h2>
+          <p>
+            ドライブに行った時、車内で流す曲はどう決める？<br />みんなで集まって映画を観る時、どう選ぶ？
+          </p>
+          <p>
+            <strong>Sync（シンク）</strong
+            >は、それぞれの持つ「感性」と「動画の雰囲気」をAIが分析し、その場面にいるみんなの好みに合った最高の作品をご提案します。
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="./img/android_image.png" alt="Sync App Screenshot" />
+        </div>
+      </section>
+
+      <section class="app-series">
+        <h3>Sync Series Apps</h3>
+        <div class="cards">
+          <div class="card">
+            <img src="./img/syncMix_icon.png" alt="SyncMix Icon" />
+            <h4>SyncMix</h4>
+            <p>
+              YouTubeの高評価動画からあなたの感性をベクトル化。複数人の感性をミックスして、今の気分に合わせた最高のプレイリストを作成します。
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/syncMatch_icon.png" alt="SyncMatch Icon" />
+            <h4>SyncMatch</h4>
+            <p>
+              あなたと友達の好みにマッチする動画や映画を提案。圧倒的な熱量や雰囲気を共有できる、ぴったりのコンテンツを見つけ出します。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="./terms.html">利用規約</a>
+        <a href="./privacy-policy.html">プライバシーポリシー</a>
+      </div>
+      <p class="copyright">
+        &copy; わらび餅キング (GDGoC Japan Hackathon 2026)
+      </p>
+    </footer>
+  </body>
+</html>
